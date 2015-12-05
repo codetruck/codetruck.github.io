@@ -29,7 +29,17 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
+    <style type="text/css">
+        .circle {
+            width: 500px;
+            height: 320px;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            overflow:hidden;
+            position:relative;
+        }
+    </style>
 </head>
 
 <body>
@@ -222,15 +232,17 @@
 
 	        <!-- First Featurette -->
 	        <div class="featurette" id="acercamiento">
-	            <img class="featurette-image img-circle img-responsive pull-right" src="img/slum.jpg" width="500">
+	            <!--<img class="featurette-image img-circle img-responsive pull-right" src="img/slum.jpg" width="500">-->
+                <div class="circle pull-right">
+                    <iframe width="100%" height="520" frameborder="0" src="https://observatoriodevivienda.cartodb.com/viz/3669c21a-7617-11e5-ab50-0e5db1731f59/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+                </div>
+
 	            <h2 class="featurette-heading"><font color="#5393C8">Acercamiento</font>
 	                <span class="text-muted"></span>
 	            </h2>
 	            <p class="lead">Queremos llegar a los lugares indicados, por lo que nuestra primera etapa consistirá en identificar las colonias que cumplen con criterios socio-económicos que las hacen candidatas idóneas para el proyecto. Nos acercaremos a ellas los fines de semana, en las unidades móviles, organizando actividades sencillas relacionadas con computación para atraer a la gente e invitarlos a la siguiente etapa del proyecto.</p>
 	        </div>
             <br><br>
-
-                <iframe width="100%" height="520" frameborder="0" src="https://observatoriodevivienda.cartodb.com/viz/3669c21a-7617-11e5-ab50-0e5db1731f59/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 	        <hr class="featurette-divider">
 
