@@ -29,6 +29,14 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/polyglot/2.2.0/css/polyglot-language-switcher.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/polyglot/2.2.0/js/jquery.polyglot.language.switcher.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/polyglot/2.2.0/images/arrow-down.gif"></script>
+
+
+
+
     <style type="text/css">
         .circle {
             width: 500px;
@@ -40,11 +48,12 @@
             position:relative;
         }
     </style>
+
+
 </head>
 
 <body>
 
-The <a href="index.html">first page</a>
 
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
@@ -72,6 +81,15 @@ The <a href="index.html">first page</a>
             <li>
                 <a href="#contact" onclick = $("#menu-close").click(); >Contacto</a>
             </li>
+            <hr class="featurette-divider">
+
+            <li>
+                <a href="/index.html" title="English (US)"  data-lang-id="en_US"><img src="img/flags/gb.png" alt="United States"> English</a>
+            </li>
+            <li>
+                <a href="/index_es.html" title="Spanish" data-lang-id="es_ES"><img src="img/flags/es.png" alt="Spain"> Español</a>
+            </li>
+
         </ul>
     </nav>
 
@@ -83,6 +101,154 @@ The <a href="index.html">first page</a>
         </div>
     </header>
 
+
+    <!-- About -->
+    <section class="services bg-primary" style="background-color: #5393C8;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2></h2>
+                    <p class="lead">The CodeTruck es una empresa social enfocada en generar capacidades de programación en jóvenes de zonas marginadas. Nuestro objetivo es mejorar su calidad de vida y reducir la brecha digital por medio de: una estrategia de aprendizaje técnico, colaborativo y escalonado; unidades móviles, donde cada codetruck funciona como un centro de entrenamiento e incubadora de negocios; y la construcción de una plataforma de desarrollo web.
+                    </p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+
+
+
+
+    <section id="motivacion" class="about">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h1><span class="text-muted">Nuestra Motivación</span></h1>
+                <p class="lead">
+                El uso de tecnología ha potenciado los alcances de nuestra capacidad creativa. Sin embargo, también ha incrementado dramáticamente la desigualdad en el mundo. La brecha digital no permite que el talento de comunidades enteras sea detectado e impulsado, y la mayoría de las escuelas no cuenta con los recursos para dar este tipo de oportunidades a los jóvenes.
+                </p>
+<!--
+            <hr class="featurette-divider">
+        <div class="col-sm-12 col-md-6" style="margin-top:2%;height:500px;">
+        <img class="fa fa-stack-1x text-primary" style="width:75%;margin:10%;" src="img/brecha.jpg">
+        </div>
+
+        <div class="col-sm-12 col-md-6" style="margin-top:6%;height:500px;">
+            <p class="lead">
+                <ul class="lead">
+                Esto genera:
+                <li class="lead"> Exclusión social y económica</li>
+                <li class="lead">Menores posibilidades de obtener un empleo bien remunerado</li>
+                <li class="lead">Menores herramientas de aprendizaje</li>
+                <li class="lead">Comunidades enteras en donde el talento no es detectado ni aprovechado</li>
+                </ul>
+            </p>
+        </div>
+-->
+
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <!-- Callout -->
+    <aside class="callout2">
+        <div class="text-vertical-center">
+            <h1></h1>
+        </div>
+    </aside>
+
+
+    <!-- About -->
+    <section  class="services bg-primary" style="background-color: #5393C8;">
+        <!-- /.container -->
+    </section>
+
+    <!--<hr class="featurette-divider">-->
+
+        <section id="proceso">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h1><span class="text-muted">Nuestro Proceso</span></h1>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                        <a href="#acercamiento" onclick = $("#menu-close").click(); >
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <img class="fa fa-stack-1x text-primary" style="width:75%;margin:10%;" src="img/acercamiento.png">
+                            </span>
+                                <h4>
+                                    <font color="#7EB1DC">Acercamiento</font>
+                                </h4>
+                                <p></p>
+                                <!--<a href="#" class="btn btn-light">Learn More</a>-->
+                            </div>
+                        </a>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                        <a href="#identificacion" onclick = $("#menu-close").click(); >
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <img class="fa fa-stack-1x text-primary" style="width:75%;margin:10%;" src="img/identificacion.png">
+                            </span>
+                                <h4>
+                                    <font color="#7EB1DC">Identificación de Talento</font>
+                                </h4>
+                                <p></p>
+                                <!--<a href="#" class="btn btn-light">Learn More</a>-->
+                            </div>
+                        </a>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                        <a href="#capacitacion" onclick = $("#menu-close").click(); >
+
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <img class="fa fa-stack-1x text-primary" style="width:75%;margin:10%;" src="img/vinculacion.png">
+                            </span>
+                                <h4>
+                                    <font color="#7EB1DC">Capacitación Productiva</font>
+                                </h4>
+                                <p></p>
+                                <!--<a href="#" class="btn btn-light">Learn More</a>-->
+                            </div>
+                        </a>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-6">
+                        <a href="#vinculacion" onclick = $("#menu-close").click(); >
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <img class="fa fa-stack-1x text-primary" style="width:75%;margin:10%;" src="img/capacitacion.png">
+                            </span>
+                                <h4>
+                                    <font color="#7EB1DC">Vinculación Laboral</font>
+                                </h4>
+                                <p></p>
+                                <!--<a href="#" class="btn btn-light">Learn More</a>-->
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+            <hr class="featurette-divider">
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
@@ -303,6 +469,12 @@ The <a href="index.html">first page</a>
         });
     });
     </script>
+
+<script>
+    jQuery(document).ready(function ($) {
+        $('.polyglot-language-switcher').polyglotLanguageSwitcher();
+    });
+</script>
 
 </body>
 
