@@ -58,12 +58,13 @@ var map = L.map('map').setView([-23.000, -71.1333], 2);
 		};
 
 		info.update = function (props) {
-			this._div.innerHTML = '<h2 class="legend-item">Penetración de Internet en<br/> América Latina</br></h2>' +  (props ?
-				'<h3 class="legend-item"><b>Penetración: </b><br />' + props.country + '<span>&nbsp;</span>' + props.internet_penetration + '%</sup></h3>'
+			this._div.innerHTML = '<h3 class="legend-item">Penetración de Internet en<br/> América Latina</br></h3>' +  (props ?
+				'<h4 class="legend-item"><b>Penetración: </b><br />' + props.country + '<span>&nbsp;</span>' + props.internet_penetration + '%</sup></h4>'
 				: '<em><h3 class="legend-item"></em></h3>');
 		};
 
 		info.addTo(map);
+
 
 		// get color depending on population density value
 		function getColor(d) {
