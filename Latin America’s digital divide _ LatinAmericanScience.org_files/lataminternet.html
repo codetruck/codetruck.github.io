@@ -9,35 +9,11 @@
 	<script type="text/javascript" src="latamgeojson.js"></script>
 </head>
 
-<body class="">
-<div id="map" style="width: 500px; height: 700px; position: relative;" class="leaflet-container leaflet-fade-anim" tabindex="0">
-<div class="leaflet-map-pane" style="transform: translate3d(-299px, 210px, 0px);">
-<div class="leaflet-tile-pane">
-<div class="leaflet-layer">
-	<div class="leaflet-tile-container leaflet-zoom-animated">
-	</div>
-<div class="leaflet-tile-container leaflet-zoom-animated">
-	<img class="leaflet-tile" src="3.png" style="height: 256px; width: 256px; left: 515px; top: -186px;">
-	<img class="leaflet-tile" src="4.png" style="height: 256px; width: 256px; left: 515px; top: 70px;">
-	<img class="leaflet-tile" src="4(1).png" style="height: 256px; width: 256px; left: 259px; top: 70px;"><img class="leaflet-tile" src="3(1).png" style="height: 256px; width: 256px; left: 259px; top: -186px;">
-	<img class="leaflet-tile" src="3(2).png" style="height: 256px; width: 256px; left: 771px; top: -186px;">
-	<img class="leaflet-tile" src="4(2).png" style="height: 256px; width: 256px; left: 771px; top: 70px;">
-	<img class="leaflet-tile" src="2.png" style="height: 256px; width: 256px; left: 515px; top: -442px;">
-	<img class="leaflet-tile" src="5.png" style="height: 256px; width: 256px; left: 515px; top: 326px;">
-	<img class="leaflet-tile" src="2(1).png" style="height: 256px; width: 256px; left: 771px; top: -442px;">
-	<img class="leaflet-tile" src="5(1).png" style="height: 256px; width: 256px; left: 259px; top: 326px;">
-	<img class="leaflet-tile" src="2(2).png" style="height: 256px; width: 256px; left: 259px; top: -442px;">
-	<img class="leaflet-tile" src="5(2).png" style="height: 256px; width: 256px; left: 771px; top: 326px;">
-</div>
-</div>
+<body>
+
+<div id="map" style="width: 100%; height: 100%;" class="leaflet-container leaflet-fade-anim" tabindex="0">
 </div>
 
-<div class="leaflet-objects-pane">
-	<div class="leaflet-shadow-pane"></div>
-	<div class="leaflet-overlay-pane">
-		<svg class="leaflet-zoom-animated" width="769" height="1076" viewBox="165 -398 769 1076" style="transform: translate3d(165px, -398px, 0px);"></svg>
-	</div>
-</div></div></div></div>
 
 <style type="text/css">
 .legend-item {text-align:center;}
@@ -59,10 +35,13 @@
 
 <script>
 
-var map = L.map('map').setView([-60.000, -71.1333], 2);
+
+
+var map = L.map('map').setView([-23.000, -71.1333], 2);
 
 		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-			maxZoom: 18,
+			maxZoom: 3,
+			minZoom: 1,
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 				'Imagery <a href="http://mapbox.com">Mapbox</a>',
@@ -81,11 +60,10 @@ var map = L.map('map').setView([-60.000, -71.1333], 2);
 		info.update = function (props) {
 			this._div.innerHTML = '<h2 class="legend-item">Penetración de Internet en<br/> América Latina</br></h2>' +  (props ?
 				'<h3 class="legend-item"><b>Penetración: </b><br />' + props.country + '<span>&nbsp;</span>' + props.internet_penetration + '%</sup></h3>'
-				: '<em><h3 class="legend-item">Click over a country</em></h3>');
+				: '<em><h3 class="legend-item"></em></h3>');
 		};
 
 		info.addTo(map);
-
 
 		// get color depending on population density value
 		function getColor(d) {
@@ -101,7 +79,7 @@ var map = L.map('map').setView([-60.000, -71.1333], 2);
 
 		function style(feature) {
 			return {
-				weight: 0,
+				weight: .5,
 				opacity: 1,
 				color: 'white',
 				dashArray: '0',
