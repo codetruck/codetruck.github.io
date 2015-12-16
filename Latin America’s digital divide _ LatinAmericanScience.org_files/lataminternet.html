@@ -81,7 +81,7 @@ var map = L.map('map').setView([-20.000, -71.1333], 3);
 		info.update = function (props) {
 			this._div.innerHTML = '<h1 class="legend-item">Internet Usage in<br /> Latin America</br></h1>' +  (props ?
 				'<h2 class="legend-item"><b>Penetration: </b><br />' + props.country + '<span>&nbsp;</span>' + props.internet_penetration + '%</sup></h2>'
-				: '<em><h3 class="legend-item">Hover over a country</em></h3>');
+				: '<em><h3 class="legend-item">Click over a country</em></h3>');
 		};
 
 		info.addTo(map);
@@ -140,9 +140,8 @@ var map = L.map('map').setView([-20.000, -71.1333], 3);
 
 		function onEachFeature(feature, layer) {
 			layer.on({
-				mouseover: highlightFeature,
+				click: highlightFeature,
 				mouseout: resetHighlight,
-				click: zoomToFeature
 			});
 		}
 
