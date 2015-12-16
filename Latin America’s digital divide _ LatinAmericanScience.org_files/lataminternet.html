@@ -46,7 +46,7 @@
     color: #555;
 }
 .legend i {
-    width: 18px;
+    width: 25px;
     height: 18px;
     float: left;
     margin-right: 8px;
@@ -59,7 +59,7 @@
 
 <script>
 
-var map = L.map('map').setView([-20.000, -71.1333], 3);
+var map = L.map('map').setView([-60.000, -71.1333], 2);
 
 		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 			maxZoom: 18,
@@ -79,8 +79,8 @@ var map = L.map('map').setView([-20.000, -71.1333], 3);
 		};
 
 		info.update = function (props) {
-			this._div.innerHTML = '<h1 class="legend-item">Internet Usage in<br /> Latin America</br></h1>' +  (props ?
-				'<h2 class="legend-item"><b>Penetration: </b><br />' + props.country + '<span>&nbsp;</span>' + props.internet_penetration + '%</sup></h2>'
+			this._div.innerHTML = '<h2 class="legend-item">Penetración de Internet en<br/> América Latina</br></h2>' +  (props ?
+				'<h3 class="legend-item"><b>Penetración: </b><br />' + props.country + '<span>&nbsp;</span>' + props.internet_penetration + '%</sup></h3>'
 				: '<em><h3 class="legend-item">Click over a country</em></h3>');
 		};
 
@@ -153,7 +153,7 @@ var map = L.map('map').setView([-20.000, -71.1333], 3);
 		map.attributionControl.addAttribution('Internet usage data <a href="http://www.itu.int/md/T13-TSAG-130604/sum/en">International Telecommunications Union 2013</a>');
 
 
-		var legend = L.control({position: 'bottomright'});
+		var legend = L.control({position: 'topright'});
 
 		legend.onAdd = function (map) {
 
