@@ -153,13 +153,15 @@ hr.small {
 .header {
     display: table;
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 50%;
-    background: url(../img/justcreative.png) no-repeat center center scroll;
+    margin-left: 23%;
+    background: url(../img/theCodeTruck.png) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-position: center;    
 }
 
 /* About */
